@@ -1,0 +1,105 @@
+\def \Subject {پروژه (فاز چهارم)}
+\def \Course {درس مبانی رایانش ابری}
+\def \Report {آشنایی با کوبرنتیز}
+
+\begin{center}
+\vspace{.4cm}
+{\bf {\huge \Subject}}\\
+{\bf \Large \href{https://vu.um.ac.ir/course/view.php?id=11171}{\Course}}
+\vspace{.1cm}
+\end{center}
+{\bf مهلت تحویل تا: \href{https://calendar.google.com/calendar/u/0/r}{\date{1402/04/01}}}    
+\hspace{\fill} 
+{\bf  \href{https://youtu.be/X48VuDVv0do}{\Report} } \\
+\hrule
+\vspace{0.8cm}
+
+\begin{itemize}
+    \item انجام این فاز به صورت گروهی است. (گروه های دو نفره) 
+    \item  محتویات آماده شده برای این فاز را به صورت یک فایل با فرمت : \\\lr{\small{FirstnameLastname\_StudentNumber\_FirstnameLastname\_StudentNumber.zip}}\\ بارگذاری کنید.
+    \\(مثال (MohammadMohammadi\_9XXXXXX\_RezaRezaei\_9XXXXXX.zip
+    \item کامنت گذاری مناسب کد الزامی است.
+    \item تحویل تکلیف بعد از مهلت مشخص شده نمره ای نخواهد داشت.
+    \item در صورت اثبات کپی برداری، نمره تکالیف کپی شده و کپی شونده هر دو از ۱۰۰ نمره، ۱۰۰- خواهد بود.
+    \item زمانبندی تحویل آنلاین تمرین پس از اتمام مهلت ارسال اعلام خواهد شد.
+    \item تحویل تمرینات از طریق تلگرام، ایمیل و ... امکان پذیر نیست.
+\end{itemize}
+
+\section*{مقدمه}
+{مطمئناً پروژه‌های کوبرنتیز به دلیل جایگاه برجسته‌ای که در صنعت تکنولوژی دارد، جذابیت بسیاری برای دانشجویان دارد.
+
+کوبرنتیز یکی از پیشرفته‌ترین و محبوب‌ترین ابزارهای مدیریت کانتینر است که به شما امکان می‌دهد برنامه‌های خود را در محیط کانتینریزه شده مدیریت کنید. با استفاده از کوبرنتیز، شما می‌توانید برنامه‌های خود را به صورت مقیاس‌پذیر و قابل اطمینان در حال اجرا نگه دارید.
+
+هدف اصلی این پروژه، آموزش مبانی کوبرنتیز به دانشجویان و همچنین ارائه‌ی یک دستورالعمل واضح برای استفاده از آن به عنوان یک ابزار مدیریتی قدرتمند است. در این پروژه، دانشجویان قادر خواهند بود تا با استفاده از کوبرنتیز، برنامه‌های خود را به راحتی مدیریت کنند و تجربه‌ای ارزشمند در حوزه مدیریت کانتینرها به دست آورند.}
+
+% 2
+\section*{اهداف}
+\normalfont
+\begin{enumerate}
+\item آشنایی با مفاهیم و اصطلاحات اساسی کوبرنتیز و مدیریت کانتینرها
+\item نصب و راه‌اندازی کوبرنتیز بر روی سیستم‌های شخصی و سرورهای شبکه
+\item آموزش مدیریت پروژه‌های کوبرنتیزی به صورت مقیاس‌پذیر و قابل اطمینان
+\item آشنایی با روش‌های مانیتورینگ و لاگینگ در کوبرنتیز
+\item آموزش استفاده از ابزارهای مختلف کوبرنتیز مانند kubectl
+\item تسلط بر روش‌های استفاده از کوبرنتیز به عنوان یک ابزار مدیریتی قدرتمند برای مدیریت برنامه‌ها و خدمات
+\end{enumerate}
+
+
+% 3    
+\section*{روش‌شناسی\footnote{Methodology}}
+{در این فاز قرار است مهاجرت از \lr{Docker Compose} که برای محیط Develop مناسب است به محیط Production یعنی فایل های کانفیگ Kubernetes رخ دهد}\\
+{اکنون فایل docker-compose که در فاز قبل ایجاد شد، کاربردی ندارد و تمام تنظیمات پروژه در فایل های yaml مربوط به منابع\footnote{Resources} kubernetes انجام خواهد شد.}\\
+در این فاز باید موارد زیر رعایت شود:}\\
+
+{کلاستر شما میبایست حداقل از ۲ نود تشکیل شده باشد. (یک نود master و نود دیگر worker ،با استفاده از \lr{minikube})
+\begin{enumerate}
+\item برنامه‌ی توسعه داده شده و پایگاه‌داده را با استفاده از دیپلویمنت و سرویسهای کوبرنتیز مستقر سازی کنید.
+
+\item امکانی فراهم کنید که با اجرای اسکریپت تمام منابع kubernetes که لازم دارید ایجاد و یا حذف شود.
+
+\item هرکدام از کانتینرهایی که در فاز قبل در docker-compose قرار داشت، اکنون باید داخل یک پاد مجزا در منابع kubernetes قرار بگیرد.
+
+\item برای variable environment ها و کانفیگ ها، از ConfigMap استفاده کنید.
+
+\item تنظیمات محرمانه مانند نام کاربری و رمز عبور سرویس پایگاه داده باید در منابع مجزا از deployment ها، یعنی secret ها نگهداری شوند.
+
+\item دسترسی به وب سرویس پروژه شما باید با کمک ingress nginx از سیستم host میسر باشد.
+
+\item دسترسی از خارج کلاستر به سرویسهای پایگاه داده داخل کلاستر kubernetes ممکن نباشد.
+
+\item مشابه فاز قبل داده های داخل پایگاه داده پس از ریستارت شدن سیستم هاست از بین نروند.
+
+\item برای هرکدام از Container هایی که نیاز به ذخیره داده دارند، یک فضای volume یک گیگابایتی با کمک یک PersistentVolumeClaim و PersistentVolume ایجاد کنید.
+
+\item رپلیکا ست برای پاد (deployment) های پایگاه‌داده ها صورت بگیرد.
+
+\item لود بالانس بین پاد (deployment) ها انجام شود.
+
+\item منابع مصرفی CPU و RAM مانند فاز اول محدود شودند.
+\end{enumerate}
+\hypersetup{
+  colorlinks   = true, %Colours links instead of ugly boxes
+  urlcolor     = green, %Colour for external hyperlinks
+  linkcolor    = green, %Colour of internal links
+  citecolor   = red %Colour of citations
+}
+{توصیه ما برای راهنما گرفتن جهت پیاده سازی این فاز ، مطالعه بخش Tutorial , Concept های سایت خود \href{https://kubernetes.io/docs/home/}{Kubernetes} می باشد. چرا که داکیومنت های جامع و کاربر پسند دارد.}\\
+
+مت{اسفانه در گذشته Katacoda پلتفرم آموزشی بخش بخش پروژه محور برای Kubernetes به صورت رایگان قرار داده بود که گویا حذف شده است. در صورت یافتن گزینه ای با کیفیت معرفی خواهد شد.}\\
+\hypersetup{
+  colorlinks   = true, %Colours links instead of ugly boxes
+  urlcolor     = blue, %Colour for external hyperlinks
+  linkcolor    = blue, %Colour of internal links
+  citecolor   = red %Colour of citations
+}
+\href{https://www.youtube.com/watch?v=X48VuDVv0do}{یکی از منابع پیشنهادی دیگر برای یادگیری Kubernetes}
+
+\\% 4
+% \section*{خروجی‌ها}
+
+% \section*{زمانبندی}
+
+% \section*{ارزیابی}
+
+% \section*{منابع}
+
