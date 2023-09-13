@@ -25,9 +25,9 @@
 [contributors-url]: https://github.com/javidchaji/FUM-Cloud-Computing-Kubernetes-Deployment-Project-Description-Phase4-TA/graphs/contributors
 
 <!-- Forks -->
-[forks-shield]: https://img.shields.io/github/forks/javidchaji/FUM-Web-Programming-Hotel-Search-UI.svg?style=for-the-badge
+[forks-shield]: https://img.shields.io/github/forks/javidchaji/FUM-Cloud-Computing-Kubernetes-Deployment-Project-Description-Phase4-TA.svg?style=for-the-badge
 
-[forks-url]: https://github.com/javidchaji/FUM-Web-Programming-Hotel-Search-UI/network/members
+[forks-url]: https://github.com/javidchaji/FUM-Cloud-Computing-Kubernetes-Deployment-Project-Description-Phase4-TA/network/members
 
 
 <!-- Stars -->
