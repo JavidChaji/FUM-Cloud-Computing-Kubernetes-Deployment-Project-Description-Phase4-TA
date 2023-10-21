@@ -50,7 +50,7 @@
 
 <!-- This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples. -->
 
-List of major frameworks/libraries used to bootstrap this project.
+Technologies and Tools Utilized in this Project
 
 * [![LaTeX][LaTeX.org]][LaTeX-url]
 
@@ -159,5 +159,5 @@ Use this space to list resources you find helpful and would like to give credit 
 
 
 
-[LaTeX.org]: https://img.shields.io/badge/LaTeX-000000?style=for-the-badge&logo=LaTeX&logoColor=white
+[LaTeX.org]: https://img.shields.io/badge/LaTeX-47A141?style=for-the-badge&logo=LaTeX&logoColor=white
 [LaTeX-url]: https://www.latex-project.org/
